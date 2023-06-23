@@ -6,6 +6,20 @@ const content = document.querySelector(".content");
 const contentFinish = document.querySelector(".finish");
 const btnRestart = document.querySelector(".restart");
 const btnCopy = document.querySelector(".copy");
+const form = document.getElementById("form")
+const name = document.getElementById("name");
+const rg = document.getElementById("rg");
+
+function setErrorFor(input, msg) {
+  const formControl = input.parentElement;
+  formControl.className = "form-control error"
+}
+
+function setSuccessFor(input, msg) {
+  const formControl = input.parentElement;
+  formControl.className = "form-control success"
+}
+
 
 import questions from "./questions.js";
 
@@ -14,6 +28,8 @@ let questionsCorrect = 0;
 
 function nextQuestion(e) {
   if (e.target.getAttribute("data-correct") === "true") {
+    var randomQuestion = questions[Math.floor(Math.random()*questions.length)]
+    console.log(randomQuestion)
     questionsCorrect++;
   }
 
@@ -32,7 +48,7 @@ function finish() {
     content.style.display = "none";
     contentFinish.style.display = "flex";
     btnCopy.onclick = () => {
-      navigator.clipboard.writeText(`\`\`\`\nNOME CONSCRITO:\nRG CONSCRITO:\nNOTA CONSCRITO: ${questionsCorrect}/${questions.length}\nSTATUS: Aprovado\`\`\``)
+      navigator.clipboard.writeText(`\`\`\`\nNOME CONSCRITO: ${name.value}\nRG CONSCRITO: ${rg.value}\nNOTA CONSCRITO: ${questionsCorrect}/${questions.length}\nSTATUS: Aprovado\`\`\``)
       btnCopy.style.color = "green"
       btnCopy.innerHTML = "Copiado ✅"
     }
@@ -42,7 +58,7 @@ function finish() {
     content.style.display = "none";
     contentFinish.style.display = "flex";
     btnCopy.onclick = () => {
-      navigator.clipboard.writeText(`\`\`\`\nNOME CONSCRITO:\nRG CONSCRITO:\nNOTA CONSCRITO: ${questionsCorrect}/${questions.length}\nSTATUS: Reprovado\`\`\``)
+      navigator.clipboard.writeText(`\`\`\`\nNOME CONSCRITO: ${name.value}\nRG CONSCRITO: ${rg.value}\nNOTA CONSCRITO: ${questionsCorrect}/${questions.length}\nSTATUS: Reprovado\`\`\``)
       btnCopy.style.color = "green"
       btnCopy.innerHTML = "Copiado ✅"
     }
@@ -80,7 +96,8 @@ btnRestart.onclick = () => {
 
   currentIndex = 0;
   questionsCorrect = 0;
-  loadQuestion();
+  // loadQuestion();
+  location.reload()
 };
 
 loadQuestion();
