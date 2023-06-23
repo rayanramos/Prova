@@ -17,7 +17,7 @@ let questionsCorrect = 0;
 function nextQuestion(e) {
   if (e.target.getAttribute("data-correct") === "true") {
     var randomQuestion = questions[Math.floor(Math.random()*questions.length)]
-    console.log(randomQuestion)
+    // console.log(randomQuestion)
     questionsCorrect++;
   }
 
