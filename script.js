@@ -6,20 +6,8 @@ const content = document.querySelector(".content");
 const contentFinish = document.querySelector(".finish");
 const btnRestart = document.querySelector(".restart");
 const btnCopy = document.querySelector(".copy");
-const form = document.getElementById("form")
 const name = document.getElementById("name");
 const rg = document.getElementById("rg");
-
-function setErrorFor(input, msg) {
-  const formControl = input.parentElement;
-  formControl.className = "form-control error"
-}
-
-function setSuccessFor(input, msg) {
-  const formControl = input.parentElement;
-  formControl.className = "form-control success"
-}
-
 
 import questions from "./questions.js";
 
