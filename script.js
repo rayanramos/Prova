@@ -30,7 +30,7 @@ function nextQuestion(e) {
 }
 
 function finish() {
-  if(questionsCorrect >= questions.length * 0.7) {
+  if(questionsCorrect >= Math.round(questions.length * 0.7)) {
     textFinish.innerHTML = `Aprovado, acertou ${questionsCorrect} de ${questions.length}`;
     textFinish.style.color = "green"
     content.style.display = "none";
