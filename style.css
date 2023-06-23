@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+}
+
+body h2 {
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main {
+  background-color: rgb(53, 52, 52);
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 700px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.spnQtd {
+  text-align: end;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+button {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  min-height: 35px;
+  cursor: pointer;
+  background: linear-gradient(90deg, rgb(7, 7, 7) 0%, rgb(95, 97, 96) 100%);
+  color: white;
+}
+
+.finish {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.finish button {
+  text-align: center;
+}
