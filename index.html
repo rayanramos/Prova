@@ -9,13 +9,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
 
   <h2>Questões</h2>
   <main>
     <div class="content">
+
+      <form id="form" class="form">
+        <div class="form-control">
+          <label for="name">Nome</label>
+          <input type="text" id="name" placeholder="Nome do conscrito">
+        </div>
+        <div class="form-control">
+          <label for="rg">RG</label>
+          <input type="text" id="rg" placeholder="RG do conscrito">
+        </div>
+      </form>
+
       <span class="spnQtd"></span>
       <span class="question"></span>
-      <div class="answers"></div>
+      <div class="answers"></div> 
     </div>
     <div class="finish">
       <span></span>
@@ -25,5 +38,6 @@
   </main>
   
   <script src="script.js" type="module"></script>
+  <script src="https://kit.fontawesome.com/f9e19193d6.js" crossorigin="anonymous"></script>
 </body>
 </html>
