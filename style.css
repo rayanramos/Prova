@@ -19,7 +19,6 @@ body {
 
 body h2 {
   color: white;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 main {
@@ -35,11 +34,49 @@ main {
 }
 
 .content {
-  color: rgb(0, 0, 0);
+  color: white;
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-control {
+  /* margin-bottom: 10px; */
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  color: white;
+  background-color: rgb(49, 46, 46);
+  border: 2px solid #f0f0f0;
+  display: block;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 100%;
+  padding: 5px;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-control i {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  visibility: hidden;
 }
 
 .spnQtd {
@@ -63,6 +100,8 @@ button {
   background: linear-gradient(90deg, rgb(7, 7, 7) 0%, rgb(95, 97, 96) 100%);
   color: white;
 }
+
+
 
 .finish {
   display: none;
