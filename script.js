@@ -52,7 +52,6 @@ function finish() {
     content.style.display = "none";
     contentFinish.style.display = "flex";
     btnCopy.onclick = () => {
-      alert("Copiado com sucesso!")
       navigator.clipboard.writeText(`\`\`\`\nNOME CONSCRITO: ${name.value}\nRG CONSCRITO: ${rg.value}\nNOTA CONSCRITO: ${questionsCorrect}/${questions.length}\nSTATUS: Aprovado\`\`\``)
       btnCopy.style.color = "green"
       btnCopy.innerHTML = "Copiado ✅"
@@ -63,7 +62,6 @@ function finish() {
     content.style.display = "none";
     contentFinish.style.display = "flex";
     btnCopy.onclick = () => {
-      alert("Copiado com sucesso!")
       navigator.clipboard.writeText(`\`\`\`\nNOME CONSCRITO: ${name.value || "nulo"}\nRG CONSCRITO: ${rg.value || "nulo"}\nNOTA CONSCRITO: ${questionsCorrect}/${questions.length}\nSTATUS: Reprovado\`\`\``)
       btnCopy.style.color = "#50C878"
       btnCopy.innerHTML = "Copiado ✅"
@@ -78,9 +76,9 @@ function loadQuestion() {
     spnScore.style.fontSize = "20px"
     spnScore.style.color = "#FF0000"
   }else {
-    spnScore.innerHTML = `Acertou ${questionsCorrect} de ${questions.length}`
-    spnScore.style.fontSize = "20px"
+    spnScore.innerHTML = `Acertou ${questionsCorrect} de ${questions.length} (Aprovado)`
     spnScore.style.color = "#00FF00"
+    spnScore.style.fontSize = "20px"
   }
   
   const item = questions[currentIndex];
