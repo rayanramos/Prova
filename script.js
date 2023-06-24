@@ -6,6 +6,7 @@ const content = document.querySelector(".content");
 const contentFinish = document.querySelector(".finish");
 const btnRestart = document.querySelector(".restart");
 const btnCopy = document.querySelector(".copy");
+const btnCopyAnt = document.querySelector(".copyAnt");
 const spnScore = document.querySelector(".scoreRealTime");
 const form = document.getElementById("form")
 const name = document.getElementById("name");
@@ -71,12 +72,16 @@ function finish() {
 
 function loadQuestion() {
   spnQtd.innerHTML = `${currentIndex + 1}/${questions.length}`;
-  if(questionsCorrect < 39) {
+  if(questionsCorrect < Math.round(questions.length * 0.7) && currentIndex < Math.round(questions.length * 0.7)) {
     spnScore.innerHTML = `Acertou ${questionsCorrect} de ${questions.length}`
     spnScore.style.fontSize = "20px"
+    spnScore.style.color = "orange"
+  }else if(questionsCorrect < Math.round(questions.length * 0.7) && currentIndex >= Math.round(questions.length * 0.7)){
+    spnScore.innerHTML = `Reprovado (Acertou ${questionsCorrect} de ${questions.length})`
+    spnScore.style.fontSize = "20px"
     spnScore.style.color = "#FF0000"
-  }else {
-    spnScore.innerHTML = `Acertou ${questionsCorrect} de ${questions.length} (Aprovado)`
+  } else if(questionsCorrect >= Math.round(questions.length * 0.7)){
+    spnScore.innerHTML = `Aprovado (Acertou ${questionsCorrect} de ${questions.length})`
     spnScore.style.color = "#00FF00"
     spnScore.style.fontSize = "20px"
   }
