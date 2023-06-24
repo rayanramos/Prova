@@ -32,10 +32,14 @@ shuffle(questions)
 
 let currentIndex = 0;
 let questionsCorrect = 0;
+let questionsNonCorrect = 0;
 
 function nextQuestion(e) {
   if (e.target.getAttribute("data-correct") === "true") {
     questionsCorrect++;
+  }
+  if (e.target.getAttribute("data-correct") === "false") {
+    questionsNonCorrect++;
   }
 
   if (currentIndex < questions.length - 1) {
@@ -72,11 +76,7 @@ function finish() {
 
 function loadQuestion() {
   spnQtd.innerHTML = `${currentIndex + 1}/${questions.length}`;
-  if(questionsCorrect < Math.round(questions.length * 0.7) && currentIndex < Math.round(questions.length * 0.7)) {
-    spnScore.innerHTML = `Acertou ${questionsCorrect} de ${questions.length}`
-    spnScore.style.fontSize = "20px"
-    spnScore.style.color = "orange"
-  }else if(questionsCorrect < Math.round(questions.length * 0.7) && currentIndex >= Math.round(questions.length * 0.7)){
+  if(questionsNonCorrect >= Math.round(questions.length * 0.7)){
     spnScore.innerHTML = `Reprovado (Acertou ${questionsCorrect} de ${questions.length})`
     spnScore.style.fontSize = "20px"
     spnScore.style.color = "#FF0000"
@@ -84,7 +84,12 @@ function loadQuestion() {
     spnScore.innerHTML = `Aprovado (Acertou ${questionsCorrect} de ${questions.length})`
     spnScore.style.color = "#00FF00"
     spnScore.style.fontSize = "20px"
+  } else {
+    spnScore.innerHTML = `Acertou ${questionsCorrect} de ${questions.length}`
+    spnScore.style.fontSize = "20px"
+    spnScore.style.color = "orange"
   }
+  
   
   const item = questions[currentIndex];
   answers.innerHTML = "";
