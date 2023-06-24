@@ -62,7 +62,7 @@ function finish() {
     content.style.display = "none";
     contentFinish.style.display = "flex";
     btnCopy.onclick = () => {
-      navigator.clipboard.writeText(`\`\`\`\nNOME CONSCRITO: ${name.value || "nulo"}\nRG CONSCRITO: ${rg.value || "nulo"}\nNOTA CONSCRITO: ${questionsCorrect}/${questions.length}\nSTATUS: Reprovado\`\`\``)
+      navigator.clipboard.writeText(`\`\`\`\nNOME CONSCRITO: ${name.value}\nRG CONSCRITO: ${rg.value}\nNOTA CONSCRITO: ${questionsCorrect}/${questions.length}\nSTATUS: Reprovado\`\`\``)
       btnCopy.style.color = "#50C878"
       btnCopy.innerHTML = "Copiado ✅"
     }
