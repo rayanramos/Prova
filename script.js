@@ -73,9 +73,16 @@ function finish() {
 
 function loadQuestion() {
   spnQtd.innerHTML = `${currentIndex + 1}/${questions.length}`;
-  spnScore.innerHTML = `Acertou ${questionsCorrect} de ${questions.length}`
-  spnScore.style.fontSize = "20px"
-  spnScore.style.color = "#00FF00"
+  if(questionsCorrect < 39) {
+    spnScore.innerHTML = `Acertou ${questionsCorrect} de ${questions.length}`
+    spnScore.style.fontSize = "20px"
+    spnScore.style.color = "#FF0000"
+  }else {
+    spnScore.innerHTML = `Acertou ${questionsCorrect} de ${questions.length}`
+    spnScore.style.fontSize = "20px"
+    spnScore.style.color = "#00FF00"
+  }
+  
   const item = questions[currentIndex];
   answers.innerHTML = "";
   question.innerHTML = item.question;
