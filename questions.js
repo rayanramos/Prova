@@ -6,13 +6,6 @@ export default [
       { option: "Errou", correct: false },
     ],
   },
-  {
-    question: "Quais procedimentos ao iniciar o código 0?",
-    answers: [
-      { option: "Acertou", correct: true },
-      { option: "Errou", correct: false },
-    ],
-  },
 
   {
     question: "O que é código 1?",
@@ -147,7 +140,7 @@ export default [
     ],
   },
   {
-    question: "Quem pode solicitar um código 7?",
+    question: "Quem pode autorizar um código 7?",
     answers: [
       { option: "Acertou", correct: true },
       { option: "Errou", correct: false },
@@ -245,6 +238,34 @@ export default [
       { option: "Errou", correct: false },
     ],
   },
+  {
+    question: "O que é PTR?",
+    answers: [
+      { option: "Acertou", correct: true },
+      { option: "Errou", correct: false },
+    ],
+  },
+  {
+    question: "O que é QTO?",
+    answers: [
+      { option: "Acertou", correct: true },
+      { option: "Errou", correct: false },
+    ],
+  },
+  {
+    question: "O que é QTH?",
+    answers: [
+      { option: "Acertou", correct: true },
+      { option: "Errou", correct: false },
+    ],
+  },
+  {
+    question: "O que é QSO?",
+    answers: [
+      { option: "Acertou", correct: true },
+      { option: "Errou", correct: false },
+    ],
+  },
 
   {
     question: "Module o início de um acompanhamento a uma bmw m4 cromada com 3 indivíduos possívelmente armados.",
@@ -268,7 +289,7 @@ export default [
     ],
   },
   {
-    question: "Module o início de um código 0 na viatura nulo terceira.",
+    question: "Como você diria o início de código 0 na viatura nulo terceira utilizando o /pd?",
     answers: [
       { option: "Acertou", correct: true },
       { option: "Errou", correct: false },
@@ -318,28 +339,21 @@ export default [
     ],
   },
   {
-    question: "Qual a função do P4 dentro da viatura?",
+    question: "Caso haja um P4, quem seria ele?",
     answers: [
       { option: "Acertou", correct: true },
       { option: "Errou", correct: false },
     ],
   },
   {
-    question: "Qual a função do P4 durante uma abordagem?",
+    question: "Quando você deve ligar o giroflex?",
     answers: [
       { option: "Acertou", correct: true },
       { option: "Errou", correct: false },
     ],
   },
   {
-    question: "Em quais situações é permitido ligar o giroflex?",
-    answers: [
-      { option: "Acertou", correct: true },
-      { option: "Errou", correct: false },
-    ],
-  },
-  {
-    question: "Em quais situações é permitido ligar o giroflex e a sirene?",
+    question: "Quando você deve ligar a sirene?",
     answers: [
       { option: "Acertou", correct: true },
       { option: "Errou", correct: false },
@@ -367,7 +381,7 @@ export default [
     ],
   },
   {
-    question: "Após o meliante se render, quais procedimentos devem ser executados?",
+    question: "Após o meliante se render, quais procedimentos devem ser efetuados?",
     answers: [
       { option: "Acertou", correct: true },
       { option: "Errou", correct: false },
@@ -381,21 +395,21 @@ export default [
     ],
   },
   {
-    question: "Caso você esqueça de recitar o Aviso de Miranda, o que deve ser feito  ao chegar no Departamento?",
-    answers: [
-      { option: "Acertou", correct: true },
-      { option: "Errou", correct: false },
-    ],
-  },
-  {
-    question: "O cidadão não pode solicitar advogado em quais casos?",
-    answers: [
-      { option: "Acertou", correct: true },
-      { option: "Errou", correct: false },
-    ],
-  },
-  {
     question: "O que você faria se fosse ofendido por um cidadão durante a prisão?",
+    answers: [
+      { option: "Acertou", correct: true },
+      { option: "Errou", correct: false },
+    ],
+  },
+  {
+    question: "Caso o meliante suba a favela durante um acompanhamento o que deve ser feito?",
+    answers: [
+      { option: "Acertou", correct: true },
+      { option: "Errou", correct: false },
+    ],
+  },
+  {
+    question: "Caso sua viatura capote durante um acompanhamento, o que você faria após descapotar a viatura?",
     answers: [
       { option: "Acertou", correct: true },
       { option: "Errou", correct: false },
