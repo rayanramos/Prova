@@ -14,7 +14,7 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 5px;
-  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+  background: radial-gradient(circle at 24.1% 68.8%, #4d784e 0%, #675645 99.4%);
 }
 
 body h2 {
