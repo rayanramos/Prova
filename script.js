@@ -51,7 +51,7 @@ function nextQuestion(e) {
 }
 
 function finish() {
-  if(questionsCorrect >= Math.round(questions.length * 0.7)) {
+  if(questionsCorrect >= Math.round(questions.length)) {
     textFinish.innerHTML = `Aprovado, acertou ${questionsCorrect} de ${questions.length}`;
     textFinish.style.color = "#50C878"
     content.style.display = "none";
@@ -80,7 +80,7 @@ function loadQuestion() {
     spnScore.innerHTML = `Reprovado (Acertou ${questionsCorrect} de ${questions.length})`
     spnScore.style.fontSize = "20px"
     spnScore.style.color = "#FF0000"
-  } else if(questionsCorrect >= Math.round(questions.length * 0.7)){
+  } else if(questionsCorrect >= Math.round(questions.length)){
     spnScore.innerHTML = `Aprovado (Acertou ${questionsCorrect} de ${questions.length})`
     spnScore.style.color = "#00FF00"
     spnScore.style.fontSize = "20px"
