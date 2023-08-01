@@ -76,7 +76,8 @@ function finish() {
 
 function loadQuestion() {
   spnQtd.innerHTML = `${currentIndex + 1}/${questions.length}`;
-  if((questions.length - currentIndex) + questionsCorrect < Math.round(questions.length)){
+  // if((questions.length - currentIndex) + questionsCorrect < Math.round(questions.length)){
+    if(questionsNonCorrect >= 1){
     spnScore.innerHTML = `Reprovado (Acertou ${questionsCorrect} de ${questions.length})`
     spnScore.style.fontSize = "20px"
     spnScore.style.color = "#FF0000"
